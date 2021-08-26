@@ -1,9 +1,11 @@
 # GDP-shiny-app
-Shiny app to visualize global population, GDP and protein sources
+**Shiny app to visualize global population, GDP and protein sources**
 
 A small app developed while learning R shiny
 
-Definition of variables used: share_asf : Proportion of protein sources from animal sources
+**Definition of variables used: **
+
+share_asf : Proportion of protein sources from animal sources
 
 gdp_capita : Gross domestic product per capita (USD)
 
