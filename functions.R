@@ -2,6 +2,14 @@
 # Author Luke Korir
 # Date: August 2021
 # _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
+library(dplyr)
+library(forcats)
+library(ggplot2)
+library(shiny)
+library(tidyr)
+library(rnaturalearth)
+library(ggtext)
+
 # Define function to plot line chart
 plot_line_chart <- function(df, var1, var2){
   df %>%  
