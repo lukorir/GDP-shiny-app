@@ -2,13 +2,6 @@
 # Author Luke Korir
 # Date: August 2021
 # _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
-library(dplyr)
-library(forcats)
-library(ggplot2)
-library(shiny)
-library(tidyr)
-library(rnaturalearth)
-library(ggtext)
 
 # Define function to plot line chart
 plot_line_chart <- function(df, var1, var2){
@@ -16,7 +9,7 @@ plot_line_chart <- function(df, var1, var2){
     ggplot(aes({{ var1 }}, {{ var2 }})) +
     geom_line(na.rm = TRUE, size = 0.8, colour = "blue") +
     theme(legend.position = "none") +
-    scale_x_continuous(breaks = seq(1990, 2020, by = 5)) +
+    scale_x_continuous(breaks = seq(1990, 2020, by = 7)) +
     theme(panel.grid.major = element_line(color = gray(0.8),
                                           linetype = "solid",
                                           size = 0.2),

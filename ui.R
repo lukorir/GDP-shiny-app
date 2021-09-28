@@ -35,11 +35,6 @@ fluidRow(column(2,selectInput("low_continent", "Choose continent", choices = fac
   column(2, selectInput("low_year", "Choose year: ", choices =  unique(protein_asf$Year), width = "100%", selected = 2017))
 ), fluidRow(
   column(3, dataTableOutput("low_indicator_table")))),
-# Map
-tabPanel("World map",
-         fluidRow(column(2, selectInput("map_indicator", "Choose indicator: ", c("population", "gdp_change",     "pop_change", "meat_ss_change", "animal_change"), width = "100%", selected = "population")),
-                  column(2, selectInput("map_year", "Choose year: ", choices =  unique(protein_asf$Year), width = "100%", selected = 2012))),
-         fluidRow(column(3, plotOutput("world_map")))),
 # Scatter plots
 tabPanel("Relationship between indicators",
          fluidRow(column(2, selectInput("xcol", "X Variable", setdiff(names(protein_asf), c("Entity", "Year", "Code", "Continent")), width = "100%", selected = "animal")),

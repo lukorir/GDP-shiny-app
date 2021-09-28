@@ -95,27 +95,6 @@ server <- function(input, output, session){
         low_countries(low_table_data(), plant, as.integer(input$low_n_countries))
       }
     })
-    # << World map of growth rate in GDP and population
-    # map_data <- reactive(world %>% filter(Year == input$map_year))
-    # 
-    # output$world_map <- renderPlot({
-    #   if (input$map_indicator == "pop_change"){
-    #   generate_map(map_data(), pop_change) + labs(title = "Yearly percentage change in total population") + 
-    #       theme(plot.title = element_text(size=30, colour = "Blue"))
-    #   } else if (input$map_indicator == "population"){
-    #       generate_map(map_data(), population) + labs(title = paste("Total population in the year", map_data()$Year)) + 
-    #       theme(plot.title = element_text(size=30, colour = "Blue"))
-    #   } else if(input$map_indicator == "meat_ss_change"){
-    #       generate_map(map_data(), meat_ss_change) + labs(title = "Annual percentage change in meat supply") + 
-    #       theme(plot.title = element_text(size=30, colour = "Blue"))
-    #   } else if(input$map_indicator == "animal_change"){
-    #       generate_map(map_data(), animal_change) + labs(title = "Annual percentage change in animal protein") + 
-    #       theme(plot.title = element_text(size=30, colour = "Blue"))
-    #   } else if(input$map_indicator == "gdp_change"){
-    #       generate_map(map_data(), gdp_change) + labs(title = "Annual percentage change in GDP per capita") + 
-    #       theme(plot.title = element_text(size=30, colour = "Blue"))
-    #     }
-    #   }, height = 1000, width = 1500)
     # << Relationship between indicators
     scatter_data <- reactive(protein_asf %>% 
       ungroup() %>% 

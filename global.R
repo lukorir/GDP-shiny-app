@@ -1,6 +1,12 @@
 
 # Load libraries
-pacman::p_load(dplyr, forcats, ggplot2, shiny, tidyr, stats, ggtext)
-# , rnaturalearth, rnaturalearthdata
+library(dplyr)
+library(shiny)
+library(forcats)
+library(ggplot2)
+library(tidyr)
+library(stats)
+library(ggtext)
+
 source("functions.R")
 source("load_process_data.R")

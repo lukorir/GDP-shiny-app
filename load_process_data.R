@@ -37,8 +37,4 @@ protein_asf <- read.csv("share-of-protein-supply-from-animal-based-foods-vs-gdp-
   ungroup() %>% group_by(Entity) %>% 
   fill(Continent, .direction = "updown")
 
-# Map data
-# world <- ne_countries(scale = "medium", returnclass = "sf") %>%
-#   rename(Code = wb_a3) %>% select(name, Code, geometry) %>% 
-#   full_join(protein_asf, by = "Code") %>% select(Entity, Year, population, geometry, contains("_change"))
 
